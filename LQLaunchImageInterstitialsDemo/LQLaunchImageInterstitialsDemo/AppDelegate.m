@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSURL *url = [NSURL URLWithString:@"https://ubmcmm.baidustatic.com/media/v1/0f000ZtVORoUP-ucKBdlJ6.jpg"];
-    [[LQLaunchImageInterstitials sharImageInterstitials]imageinterstitialsWithImageURL:url andWindow:self.window  andTime:10 andType:LQFullScreenType andBlock:^{
+    [[LQLaunchImageInterstitials sharImageInterstitials]imageinterstitialsWithImageURL:url andWindow:self.window  andTime:10 andType:LQTopLogoType andBlock:^{
         ViewController *vc = [[ViewController alloc]init];
         self.window.rootViewController = vc;
     }
