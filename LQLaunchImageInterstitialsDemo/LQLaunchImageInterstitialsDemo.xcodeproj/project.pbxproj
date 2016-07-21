@@ -27,7 +27,7 @@
 		09CD093C1D40D2A60054187C /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CD092C1D40D2A60054187C /* UIImageView+HighlightedWebCache.m */; };
 		09CD093D1D40D2A60054187C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CD092E1D40D2A60054187C /* UIImageView+WebCache.m */; };
 		09CD093E1D40D2A60054187C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CD09301D40D2A60054187C /* UIView+WebCacheOperation.m */; };
-		09CD09421D40D2FD0054187C /* LQLaunchImageInterstitials.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CD09411D40D2FD0054187C /* LQLaunchImageInterstitials.m */; };
+		09CD09461D40D7560054187C /* LQLaunchImageInterstitials.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CD09451D40D7560054187C /* LQLaunchImageInterstitials.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,8 +70,8 @@
 		09CD092E1D40D2A60054187C /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		09CD092F1D40D2A60054187C /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		09CD09301D40D2A60054187C /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		09CD09401D40D2FD0054187C /* LQLaunchImageInterstitials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQLaunchImageInterstitials.h; sourceTree = "<group>"; };
-		09CD09411D40D2FD0054187C /* LQLaunchImageInterstitials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQLaunchImageInterstitials.m; sourceTree = "<group>"; };
+		09CD09441D40D7560054187C /* LQLaunchImageInterstitials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQLaunchImageInterstitials.h; sourceTree = "<group>"; };
+		09CD09451D40D7560054187C /* LQLaunchImageInterstitials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQLaunchImageInterstitials.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 		09CD08FB1D40D2900054187C /* LQLaunchImageInterstitialsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				09CD093F1D40D2FD0054187C /* LQLaunchImageInterstitials */,
+				09CD09431D40D7560054187C /* LQLaunchImageInterstitials */,
 				09CD09131D40D2A60054187C /* SDWebImage */,
 				09CD08FF1D40D2900054187C /* AppDelegate.h */,
 				09CD09001D40D2900054187C /* AppDelegate.m */,
@@ -163,14 +163,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		09CD093F1D40D2FD0054187C /* LQLaunchImageInterstitials */ = {
+		09CD09431D40D7560054187C /* LQLaunchImageInterstitials */ = {
 			isa = PBXGroup;
 			children = (
-				09CD09401D40D2FD0054187C /* LQLaunchImageInterstitials.h */,
-				09CD09411D40D2FD0054187C /* LQLaunchImageInterstitials.m */,
+				09CD09441D40D7560054187C /* LQLaunchImageInterstitials.h */,
+				09CD09451D40D7560054187C /* LQLaunchImageInterstitials.m */,
 			);
-			path = LQLaunchImageInterstitials;
-			sourceTree = SOURCE_ROOT;
+			name = LQLaunchImageInterstitials;
+			path = ../../LQLaunchImageInterstitials;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -247,7 +248,7 @@
 				09CD09351D40D2A60054187C /* SDWebImageDownloader.m in Sources */,
 				09CD09391D40D2A60054187C /* UIButton+WebCache.m in Sources */,
 				09CD093C1D40D2A60054187C /* UIImageView+HighlightedWebCache.m in Sources */,
-				09CD09421D40D2FD0054187C /* LQLaunchImageInterstitials.m in Sources */,
+				09CD09461D40D7560054187C /* LQLaunchImageInterstitials.m in Sources */,
 				09CD09341D40D2A60054187C /* SDWebImageDecoder.m in Sources */,
 				09CD09041D40D2900054187C /* ViewController.m in Sources */,
 				09CD09331D40D2A60054187C /* SDWebImageCompat.m in Sources */,
