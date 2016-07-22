@@ -43,6 +43,10 @@
  */
 @property (nonatomic, copy) void (^closeBlock)();
 
+/**
+ *  点击广告图片的回调
+ */
+@property (nonatomic, copy) void (^clickImageBlock)();
 @end
 
 
@@ -64,14 +68,22 @@
 /**
  *  创建一个启动时广告View
  *
- *  @param url    广告图片url
- *  @param window window
- *  @param time   定时器的时间
- *  @param type   展示的方式（全屏、logo在上部分、logo在下部分）
- *  @param block  点击跳过或者时间完后的回调
+ *  @param url             广告图片url
+ *  @param window          window
+ *  @param time            定时器的时间
+ *  @param type            展示的方式（全屏、logo在上部分、logo在下部分）
+ *  @param block           点击跳过或者时间完后的回调
+ *  @param clickImageBlock  点击广告图片回调
  */
-- (void)imageinterstitialsWithImageURL:(NSURL *)url andWindow:(UIWindow*)window andTime:(NSInteger)time andType:(LQLaunchImageType)type andBlock:(void (^)())block
+- (void)imageinterstitialsWithImageURL:(NSURL *)url andWindow:(UIWindow*)window andTime:(NSInteger)time andType:(LQLaunchImageType)type andBlock:(void (^)())block andClickImageBlock:(void(^)())clickImageBlock
 {
+    /**
+     *  添加手势
+     */
+    self.clickImageBlock = clickImageBlock;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAdImageView)];
+    [self addGestureRecognizer:tap];
+    
     self.seconds = time;
     self.closeBlock = block;
     //获取启动图片
@@ -163,6 +175,14 @@
              [self clipsToBounds];
          }];
     }
+}
+
+/**
+ *  点击广告事件
+ */
+- (void)clickAdImageView
+{
+    self.clickImageBlock();
 }
 
 /**

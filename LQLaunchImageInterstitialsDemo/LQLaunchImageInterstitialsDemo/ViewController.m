@@ -14,6 +14,19 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([self.type isEqualToString:@"clcikImage"])
+    {
+        UIViewController *vc = [[UIViewController alloc]init];
+        vc.view.backgroundColor = [UIColor orangeColor];
+        vc.title = @"广告VC";
+        self.type = nil;
+        [self.navigationController pushViewController:vc animated:NO];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     UILabel *label = [[UILabel alloc]init];

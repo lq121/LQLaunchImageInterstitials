@@ -21,13 +21,20 @@
     
     NSURL *url = [NSURL URLWithString:@"https://ubmcmm.baidustatic.com/media/v1/0f000ZtVORoUP-ucKBdlJ6.jpg"];
     [[LQLaunchImageInterstitials sharImageInterstitials]imageinterstitialsWithImageURL:url andWindow:self.window  andTime:10 andType:LQTopLogoType andBlock:^{
-        ViewController *vc = [[ViewController alloc]init];
-        self.window.rootViewController = vc;
-    }
-     ];
-    
+        [self changeRootViewControllerWithType:nil];
+    } andClickImageBlock:^{
+        [self changeRootViewControllerWithType:@"clcikImage"];
+    }] ;
     
     return YES;
+}
+
+- (void)changeRootViewControllerWithType:(NSString*)type
+{
+    ViewController *vc = [[ViewController alloc]init];
+    vc.title = type;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
